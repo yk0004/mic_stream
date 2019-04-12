@@ -37,7 +37,7 @@ public class MicStreamPlugin implements EventChannel.StreamHandler {
   private static int mFormat = AudioFormat.ENCODING_PCM_16BIT;
   private MicStreamPlugin(Activity activity){
     mRecorder = null;
-    mSampleRate = 48000;
+    mSampleRate = 16000;
     //make it 2x buffer
     mInBufferSize = AudioRecord.getMinBufferSize(mSampleRate, AudioFormat.CHANNEL_IN_MONO, mFormat) * 2;
     //https://stackoverflow.com/questions/15804903/android-dev-audiorecord-without-blocking-or-threads
